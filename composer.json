@@ -1,0 +1,10 @@
+{
+    "require-dev": {
+        "vlucas/phpdotenv": "^2.4",
+        "phpunit/phpunit": "4.8.*",
+        "phpunit/dbunit": ">=1.2"
+    },
+    "autoload": {
+        "psr-4": {"App\\": "src/app"}
+    }
+}
