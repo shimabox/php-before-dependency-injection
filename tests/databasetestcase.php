@@ -50,12 +50,9 @@ abstract class DatabaseTestCase extends \PHPUnit_Extensions_Database_TestCase
 	public function getConnection()
 	{
 		if ($this->conn === null) {
-			$DB_DSN  = getenv('DB_DSN') ? getenv('DB_DSN') : $GLOBALS['DB_DSN'];
-			$DB_USER = getenv('DB_USER') ? getenv('DB_USER') : $GLOBALS['DB_USER'];
-			$DB_PASS = getenv('DB_PASS') ? getenv('DB_PASS') : $GLOBALS['DB_PASS'];
 
 			if (self::$pdo == null) {
-				self::$pdo = new \PDO($DB_DSN, $DB_USER, $DB_PASS);
+				self::$pdo = new \PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASS']);
 				self::$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 				self::$pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
 			}
