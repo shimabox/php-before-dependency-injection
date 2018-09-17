@@ -6,5 +6,14 @@
     },
     "autoload": {
         "psr-4": {"App\\": "src/app"}
+    },
+    "scripts": {
+        "init-env": "php -r \"file_exists('src/config/.env') || copy('src/config/.env.example', 'src/config/.env');\"",
+        "post-install-cmd": [
+            "@init-env"
+        ],
+        "post-update-cmd": [
+            "@init-env"
+        ]
     }
 }
