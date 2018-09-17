@@ -1,5 +1,7 @@
 # php-before-dependency-injection
 
+[![Build Status](https://travis-ci.org/shimabox/php-before-dependency-injection.svg?branch=master)](https://travis-ci.org/shimabox/php-before-dependency-injection)
+
 -  https://blog.shimabox.net/2016/11/18/before_writing_phpunit_dbunit/
 -  上記ブログのテストコード
 
