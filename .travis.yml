@@ -16,8 +16,7 @@ matrix:
       dist: precise
 
 before_script:
-  - mysql -uroot -e "create database test;"
-  - mysql -uroot -e "use test;"
+  - mysql -uroot -e 'CREATE DATABASE test;'
   - mysql -uroot test < data/test_sample_ddl.sql
   - travis_retry composer install
 
